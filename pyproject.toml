@@ -8,6 +8,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.10"
 langchain = "^0.0.276"
+weaviate-client = "^3.23.2"
 
 
 [build-system]
