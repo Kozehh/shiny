@@ -2,11 +2,11 @@ import requests
 import json
 from os import environ
 
-url = "https://api.rawg.io/api/games/327239"
+#url = "https://api.rawg.io/api/games/327239"
+url = "https://api.rawg.io/api/games/valve-software"
 params = {
     "key": environ['RAWG_API_KEY']
 }
-
 response = requests.get(url, params=params)
 
 if response.status_code == 200:
