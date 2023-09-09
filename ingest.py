@@ -41,14 +41,13 @@ if not client.schema.exists("Exercise"):
     client.schema.create_class(class_obj)
 
 
-
-client.batch.configure(batch_size=100)  # Configure batch
-with client.batch as batch:  # Initialize a batch process
-    for i, d in enumerate(data):  # Batch import data
-        print(f"importing exercise: {i+1}")
-        print(d)
-        properties = d
-        batch.add_data_object(
-            data_object=properties,
-            class_name="Exercise"
-        )
+    client.batch.configure(batch_size=100)  # Configure batch
+    with client.batch as batch:  # Initialize a batch process
+        for i, d in enumerate(data):  # Batch import data
+            print(f"importing exercise: {i+1}")
+            print(d)
+            properties = d
+            batch.add_data_object(
+                data_object=properties,
+                class_name="Exercise"
+            )
